@@ -1,0 +1,54 @@
+{
+  "name": "lorca-ts-react-starter",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@chakra-ui/react": "^1.6.10",
+    "@emotion/react": "^11",
+    "@emotion/styled": "^11",
+    "framer-motion": "^4",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
+    "react-scripts": "^3.4.0",
+    "typescript": "4.4.4"
+  },
+  "scripts": {
+    "start": "npm-run-all go:start react:start",
+    "build": "npm-run-all react:build go:generate go:build",
+    "test": "npm-run-all go:test react:test",
+    "go:start": "go build -tags debug",
+    "go:generate": "go generate",
+    "go:build": "go build",
+    "go:test": "go test ./...",
+    "react:start": "BROWSER=./browser.js react-scripts start",
+    "react:build": "react-scripts build",
+    "react:test": "react-scripts test --coverage --watchAll=false"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "npm-run-all": "^4.1.5",
+    "@types/jest": "24.0.15",
+    "@types/node": "12.0.10",
+    "@types/react": "16.8.22",
+    "@types/react-dom": "16.8.4"
+  },
+  "jest": {
+    "watchPathIgnorePatterns": [
+      "<rootDir>/node_modules/"
+    ]
+  }
+}
