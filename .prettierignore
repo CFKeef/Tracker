@@ -1,6 +1,0 @@
-node_modules
-build
-coverage
-go.mod
-go.sum
-.go
